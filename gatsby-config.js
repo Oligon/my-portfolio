@@ -10,13 +10,13 @@ const plugins = [
   {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      name: `${about.name} Portfolio`,
-      short_name: `${about.name} Portfolio`,
+      name: `${about.name}`,
+      short_name: `${about.name}`,
       start_url: '/',
       background_color: colors.background,
       theme_color: colors.primary,
       display: 'minimal-ui',
-      icon: 'media/icon.png',
+      icon: 'misc/favicon.png',
     },
   },
   'gatsby-plugin-styled-components',
