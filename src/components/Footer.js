@@ -59,19 +59,19 @@ const Footer = () => (
           <FooterContainer>
             <Fade left>
               <TextFooter fontSize={[2, 3]}>
-                <span>{`${name} Portfolio - Powered by `}</span>
-                <Link href="https://www.gatsbyjs.org/">Gatsby</Link>
+                <span>{`${name}'s Portfolio - Powered by `}</span>
+                <Link target="_blank" href="https://www.gatsbyjs.org/">Gatsby</Link>
                 <span>, </span>
-                <Link href="https://www.contentful.com/" mr={1}>
+                <Link target="_blank" href="https://www.contentful.com/" mr={1}>
                   Contentful
                 </Link>
                 <span> and </span>
-                <Link href="https://www.netlify.com/" mr={1}>
-                  Netlify
+                <Link target="_blank" href="https://www.netlify.com/" mr={1}>
+                  Netlify.
                 </Link>
-                <span role="img" aria-label="heart">
-                  ❤️
-                </span>
+                <span>Built using the </span>
+                <Link target="_blank" href="https://github.com/EmaSuriano/gatsby-starter-mate" mr={1}>Mate Gatsby Starter</Link>
+                <span>template.</span>
               </TextFooter>
             </Fade>
             <Flex>
