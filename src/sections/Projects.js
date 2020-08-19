@@ -133,7 +133,7 @@ const Project = ({
               float: 'right',
             }}
           >
-            { repositoryUrl ? 
+            { repositoryUrl ? (
               <Box mx={1} fontSize={5}>
                 <SocialLink
                   name="Check repository"
@@ -141,22 +141,24 @@ const Project = ({
                   url={repositoryUrl}
                 />
               </Box>
+            )
             : null }
-            { projectUrl ? 
+            { projectUrl ? (
               <Box mx={1} fontSize={5}>
                 <SocialLink
                   name="See project"
                   fontAwesomeIcon="globe"
                   url={projectUrl}
                 />
-              </Box> 
+              </Box>
+            ) 
             : null }
           </Flex>
           <ImageSubtitle bg="primary" color="white" y="bottom" x="right" round>
             {type}
           </ImageSubtitle>
           <Hide query={MEDIA_QUERY_SMALL}>
-            <ImageSubtitle bg="backgroundDark">{publishedDate ? publishedDate : "Ongoing"}</ImageSubtitle>
+            <ImageSubtitle bg="backgroundDark">{publishedDate || "Ongoing"}</ImageSubtitle>
           </Hide>
         </ProjectTag>
       </ImageContainer>
