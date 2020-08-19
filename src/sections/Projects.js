@@ -156,7 +156,7 @@ const Project = ({
             {type}
           </ImageSubtitle>
           <Hide query={MEDIA_QUERY_SMALL}>
-            <ImageSubtitle bg="backgroundDark">{publishedDate}</ImageSubtitle>
+            <ImageSubtitle bg="backgroundDark">{publishedDate ? publishedDate : "Ongoing"}</ImageSubtitle>
           </Hide>
         </ProjectTag>
       </ImageContainer>
