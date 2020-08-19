@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Heading, Text, Flex, Box } from 'rebass/styled-components';
@@ -188,18 +189,26 @@ const Writing = () => (
       }
 
       const { isMediumUserDefined } = site.siteMetadata;
+      const { hasPublicArticles } = allMediumPost > 0;
 
       return (
-        isMediumUserDefined && (
+        isMediumUserDefined &&  (
           <Section.Container id="writing" Background={Background}>
             <Section.Header name="Writing" icon="✍️" label="writing" />
-            <CardContainer minWidth="300px">
-              {posts.map(({ Component, ...rest }) => (
-                <Fade bottom key={rest.id}>
-                  <Component {...rest} key={rest.id} />
-                </Fade>
+            { hasPublicArticles ? (
+              <CardContainer minWidth="300px">
+                {posts.map(({ Component, ...rest }) => (
+                  <Fade bottom key={rest.id}>
+                    <Component {...rest} key={rest.id} />
+                  </Fade>
               ))}
-            </CardContainer>
+              </CardContainer>
+          )
+            : (
+              <CardContainer minWidth="300px">
+                I haven't posted any articles yet. Check back soon!
+              </CardContainer>
+          )}
           </Section.Container>
         )
       );

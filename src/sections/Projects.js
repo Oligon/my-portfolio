@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Image, Text, Flex, Box, Heading } from 'rebass/styled-components';
+import { Image, Text, Flex, Box } from 'rebass/styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
@@ -124,11 +124,6 @@ const Project = ({
           {description}
         </Text>
       </TextContainer>
-
-      <Heading>
-        Yo
-      </Heading>
-
       <ImageContainer>
         <ProjectImage src={logo.image.src} alt={logo.title} />
         <ProjectTag>
